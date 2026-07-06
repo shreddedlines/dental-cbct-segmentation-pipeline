@@ -1,0 +1,35 @@
+# =============================================================================
+# Dental CBCT Segmentation Pipeline — Python Dependencies
+#
+# Install:  pip install -r requirements.txt
+#
+# Notes:
+#   - PyTorch should be installed FIRST following official instructions for
+#     your CUDA version: https://pytorch.org/get-started/locally/
+#   - nnU-Net v2 will pull its own torch dependencies if not pre-installed.
+# =============================================================================
+
+# ── Core ML framework ───────────────────────────────────────────────────
+torch>=2.0
+nnunetv2>=2.5
+
+# ── Medical image I/O ───────────────────────────────────────────────────
+nibabel>=5.0
+SimpleITK>=2.3
+
+# ── Scientific computing ────────────────────────────────────────────────
+numpy>=1.24
+scipy>=1.11
+scikit-image>=0.21
+scikit-learn>=1.3
+pandas>=2.0
+
+# ── Visualization ───────────────────────────────────────────────────────
+matplotlib>=3.7
+plotly>=5.18
+kaleido>=0.2.1       # Static image export for Plotly (optional but recommended)
+
+# ── Configuration & utilities ────────────────────────────────────────────
+PyYAML>=6.0
+tqdm>=4.65
+rich>=13.0

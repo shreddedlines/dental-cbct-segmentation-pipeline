@@ -1,0 +1,46 @@
+2026-07-04 01:14:06 | INFO     | dental_pipeline.config | Logging initialised — file: /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/logs/06_visualize.log
+2026-07-04 01:14:06 | INFO     | __main__ | ======================================================================
+2026-07-04 01:14:06 | INFO     | __main__ | PHASE 6 — Visualization
+2026-07-04 01:14:06 | INFO     | __main__ | ======================================================================
+2026-07-04 01:14:06 | INFO     | __main__ | Image dir:         /usershome/cs671_user15/Dobbe AI/ToothFairy3/imagesTr
+2026-07-04 01:14:06 | INFO     | __main__ | Segmentation dir:  /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/predictions/fold_0/postprocessed
+2026-07-04 01:14:06 | INFO     | dental_pipeline.visualization | Generating visualisation for ToothFairy3F_001
+2026-07-04 01:14:11 | INFO     | dental_pipeline.visualization | HTML saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3F_001_slices.html
+2026-07-04 01:14:41 | INFO     | dental_pipeline.visualization | HTML saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3F_001_3d.html
+2026-07-04 01:14:42 | INFO     | dental_pipeline.visualization | Overlay screenshot saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3F_001_overlay.png
+2026-07-04 01:14:42 | INFO     | dental_pipeline.visualization | Generating visualisation for ToothFairy3P_080
+2026-07-04 01:14:43 | INFO     | dental_pipeline.visualization | HTML saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_080_slices.html
+2026-07-04 01:14:44 | INFO     | dental_pipeline.visualization | HTML saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_080_3d.html
+2026-07-04 01:14:44 | INFO     | dental_pipeline.visualization | Overlay screenshot saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_080_overlay.png
+2026-07-04 01:14:44 | INFO     | dental_pipeline.visualization | Generating visualisation for ToothFairy3P_262
+2026-07-04 01:14:46 | INFO     | dental_pipeline.visualization | HTML saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_262_slices.html
+2026-07-04 01:14:47 | INFO     | dental_pipeline.visualization | HTML saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_262_3d.html
+2026-07-04 01:14:47 | INFO     | dental_pipeline.visualization | Overlay screenshot saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_262_overlay.png
+2026-07-04 01:14:47 | INFO     | dental_pipeline.visualization | Generating visualisation for ToothFairy3P_455
+2026-07-04 01:14:49 | INFO     | dental_pipeline.visualization | HTML saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_455_slices.html
+2026-07-04 01:14:51 | INFO     | dental_pipeline.visualization | HTML saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_455_3d.html
+2026-07-04 01:14:52 | INFO     | dental_pipeline.visualization | Overlay screenshot saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_455_overlay.png
+2026-07-04 01:14:52 | INFO     | dental_pipeline.visualization | Generating visualisation for ToothFairy3S_0051
+2026-07-04 01:14:54 | INFO     | dental_pipeline.visualization | HTML saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3S_0051_slices.html
+2026-07-04 01:14:56 | INFO     | dental_pipeline.visualization | HTML saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3S_0051_3d.html
+2026-07-04 01:14:57 | INFO     | dental_pipeline.visualization | Overlay screenshot saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3S_0051_overlay.png
+2026-07-04 01:14:57 | INFO     | dental_pipeline.visualization | Visualisation complete — 15 artefacts generated in /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations
+2026-07-04 01:14:57 | INFO     | __main__ | 
+2026-07-04 01:14:57 | INFO     | __main__ | ======================================================================
+2026-07-04 01:14:57 | INFO     | __main__ | VISUALIZATION COMPLETE — 15 files generated:
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3F_001_slices.html
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3F_001_3d.html
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3F_001_overlay.png
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_080_slices.html
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_080_3d.html
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_080_overlay.png
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_262_slices.html
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_262_3d.html
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_262_overlay.png
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_455_slices.html
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_455_3d.html
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3P_455_overlay.png
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3S_0051_slices.html
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3S_0051_3d.html
+2026-07-04 01:14:57 | INFO     | __main__ |   → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/visualizations/ToothFairy3S_0051_overlay.png
+2026-07-04 01:14:57 | INFO     | __main__ | ======================================================================

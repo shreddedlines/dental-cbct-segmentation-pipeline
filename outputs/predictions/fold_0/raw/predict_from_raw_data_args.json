@@ -1,0 +1,11 @@
+{
+    "folder_with_segs_from_prev_stage": null,
+    "list_of_lists_or_source_folder": "/usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_raw/Dataset100_ToothFairy3/imagesTr",
+    "num_parts": 1,
+    "num_processes_preprocessing": 3,
+    "num_processes_segmentation_export": 3,
+    "output_folder_or_list_of_truncated_output_files": "/usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/predictions/fold_0/raw",
+    "overwrite": true,
+    "part_id": 0,
+    "save_probabilities": false
+}

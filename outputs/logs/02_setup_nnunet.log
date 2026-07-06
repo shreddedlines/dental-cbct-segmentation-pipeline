@@ -1,0 +1,48 @@
+2026-07-03 03:25:23,918 | INFO     | dental_pipeline.nnunet_setup | ============================================================
+2026-07-03 03:25:23,918 | INFO     | dental_pipeline.nnunet_setup | Starting nnU-Net environment setup
+2026-07-03 03:25:23,918 | INFO     | dental_pipeline.nnunet_setup | ============================================================
+2026-07-03 03:25:23,918 | INFO     | dental_pipeline.nnunet_setup | Directory ready: nnUNet_raw -> /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_raw
+2026-07-03 03:25:23,918 | INFO     | dental_pipeline.nnunet_setup | Directory ready: nnUNet_preprocessed -> /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_preprocessed
+2026-07-03 03:25:23,918 | INFO     | dental_pipeline.nnunet_setup | Directory ready: nnUNet_results -> /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_results
+2026-07-03 03:25:23,918 | INFO     | dental_pipeline.nnunet_setup |   Symlinked: imagesTr -> /usershome/cs671_user15/Dobbe AI/ToothFairy3/imagesTr
+2026-07-03 03:25:23,919 | INFO     | dental_pipeline.label_remapping | Label mapping built: 78 classes, original range [0, 148] → consecutive [0, 77]
+2026-07-03 03:25:23,919 | INFO     | dental_pipeline.label_remapping | ============================================================
+2026-07-03 03:25:23,919 | INFO     | dental_pipeline.label_remapping | Starting label remapping (original → consecutive)
+2026-07-03 03:25:23,919 | INFO     | dental_pipeline.label_remapping | ============================================================
+2026-07-03 03:25:23,921 | INFO     | dental_pipeline.label_remapping | Remapping 532 label files: /usershome/cs671_user15/Dobbe AI/ToothFairy3/labelsTr → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_raw/Dataset100_ToothFairy3/labelsTr
+2026-07-03 03:25:39,640 | WARNING  | dental_pipeline.label_remapping |   ToothFairy3S_0048.nii.gz: WARNING: mapped 555 voxels with unknown label(s) [np.int32(160)] to background (below threshold of 1000)
+2026-07-03 03:25:39,721 | INFO     | dental_pipeline.label_remapping | Remapping finished: 532/532 succeeded, 0 failed
+2026-07-03 03:25:39,723 | INFO     | dental_pipeline.label_remapping | Generated consecutive dataset.json → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_raw/Dataset100_ToothFairy3/dataset.json
+2026-07-03 03:25:39,724 | INFO     | dental_pipeline.label_remapping | Label mapping saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/label_mapping.json
+2026-07-03 03:25:39,725 | INFO     | dental_pipeline.label_remapping | ============================================================
+2026-07-03 03:25:39,725 | INFO     | dental_pipeline.label_remapping | Label remapping complete
+2026-07-03 03:25:39,725 | INFO     | dental_pipeline.label_remapping | ============================================================
+2026-07-03 03:25:39,726 | INFO     | dental_pipeline.nnunet_setup | Set env: nnUNet_raw=/usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_raw
+2026-07-03 03:25:39,726 | INFO     | dental_pipeline.nnunet_setup | Set env: nnUNet_preprocessed=/usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_preprocessed
+2026-07-03 03:25:39,726 | INFO     | dental_pipeline.nnunet_setup | Set env: nnUNet_results=/usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_results
+2026-07-03 03:25:39,726 | INFO     | dental_pipeline.nnunet_setup |   ✓ imagesTr OK: /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_raw/Dataset100_ToothFairy3/imagesTr
+2026-07-03 03:25:39,728 | INFO     | dental_pipeline.nnunet_setup |   ✓ labelsTr OK: 532 remapped files
+2026-07-03 03:25:39,729 | INFO     | dental_pipeline.nnunet_setup |   ✓ dataset.json OK (consecutive labels)
+2026-07-03 03:25:39,729 | INFO     | dental_pipeline.nnunet_setup |   ✓ label_mapping.json OK
+2026-07-03 03:25:39,729 | INFO     | dental_pipeline.nnunet_setup |   ✓ Command found: nnUNetv2_plan_and_preprocess -> /usershome/cs671_user15/Dobbe AI/dental-segmentation/venv/bin/nnUNetv2_plan_and_preprocess
+2026-07-03 03:25:39,729 | INFO     | dental_pipeline.nnunet_setup |   ✓ Command found: nnUNetv2_train -> /usershome/cs671_user15/Dobbe AI/dental-segmentation/venv/bin/nnUNetv2_train
+2026-07-03 03:25:39,729 | INFO     | dental_pipeline.nnunet_setup |   ✓ Command found: nnUNetv2_predict -> /usershome/cs671_user15/Dobbe AI/dental-segmentation/venv/bin/nnUNetv2_predict
+2026-07-03 03:25:39,729 | INFO     | dental_pipeline.nnunet_setup |   ✓ Env var set: nnUNet_raw=/usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_raw
+2026-07-03 03:25:39,729 | INFO     | dental_pipeline.nnunet_setup |   ✓ Env var set: nnUNet_preprocessed=/usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_preprocessed
+2026-07-03 03:25:39,729 | INFO     | dental_pipeline.nnunet_setup |   ✓ Env var set: nnUNet_results=/usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_results
+2026-07-03 03:25:39,729 | INFO     | dental_pipeline.nnunet_setup | All verification checks passed.
+2026-07-03 03:25:39,729 | INFO     | dental_pipeline.nnunet_setup | ============================================================
+2026-07-03 03:25:39,729 | INFO     | dental_pipeline.nnunet_setup | nnU-Net environment setup completed successfully
+2026-07-03 03:25:39,730 | INFO     | dental_pipeline.nnunet_setup | ============================================================
+2026-07-03 03:25:39,730 | INFO     | __main__ | 
+2026-07-03 03:25:39,730 | INFO     | __main__ | ============================================================
+2026-07-03 03:25:39,730 | INFO     | __main__ | nnU-Net environment variables (set these in your shell):
+2026-07-03 03:25:39,730 | INFO     | __main__ | ============================================================
+2026-07-03 03:25:39,730 | INFO     | __main__ |   export nnUNet_raw="/usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_raw"
+2026-07-03 03:25:39,730 | INFO     | __main__ |   export nnUNet_preprocessed="/usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_preprocessed"
+2026-07-03 03:25:39,730 | INFO     | __main__ |   export nnUNet_results="/usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_results"
+2026-07-03 03:25:39,730 | INFO     | __main__ | 
+2026-07-03 03:25:39,731 | INFO     | __main__ | Shell snippet written to: /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_env.sh
+2026-07-03 03:25:39,731 | INFO     | __main__ |   → source /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/nnunet_env.sh
+2026-07-03 03:25:39,731 | INFO     | __main__ | 
+2026-07-03 03:25:39,731 | INFO     | __main__ | nnU-Net setup complete (labels remapped to consecutive IDs). You can now run preprocessing.

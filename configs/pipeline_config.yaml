@@ -1,0 +1,186 @@
+# =============================================================================
+# Dental CBCT Segmentation Pipeline — Master Configuration
+# =============================================================================
+# This file controls every aspect of the pipeline: dataset paths, nnU-Net
+# parameters, training hyper-parameters, evaluation post-processing, and
+# visualization defaults.
+#
+# QUICK START:
+#   1. Set  paths.dataset_root  to your local ToothFairy3 directory.
+#   2. Run  python scripts/01_validate_dataset.py --config configs/pipeline_config.yaml
+#   3. Proceed with preprocessing → training → evaluation.
+#
+# All relative paths are resolved from the project root directory
+# (the parent of this configs/ folder).
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Project metadata
+# ---------------------------------------------------------------------------
+project:
+  name: "dental-cbct-segmentation"
+  description: "Production segmentation pipeline for dental CBCT volumes (ToothFairy3)"
+  seed: 42                         # Global random seed for reproducibility
+
+# ---------------------------------------------------------------------------
+# Paths — the ONLY section a new user MUST edit
+# ---------------------------------------------------------------------------
+paths:
+  # Absolute path to the raw ToothFairy3 dataset (read-only).
+  # Must contain:  imagesTr/  labelsTr/  dataset.json
+  dataset_root: "/usershome/cs671_user15/Dobbe AI/ToothFairy3"          # ← USER: set this
+
+  # All pipeline outputs go here (created automatically)
+  output_root: "./outputs"
+
+  # nnU-Net directory structure (env vars are set automatically)
+  nnunet_raw: "./outputs/nnunet_raw"
+  nnunet_preprocessed: "./outputs/nnunet_preprocessed"
+  nnunet_results: "./outputs/nnunet_results"
+
+  # Post-training artefacts
+  predictions: "./outputs/predictions"
+  metrics: "./outputs/metrics"
+  visualizations: "./outputs/visualizations"
+  validation_report: "./outputs/validation_report"
+  logs: "./outputs/logs"
+
+# ---------------------------------------------------------------------------
+# Dataset — must match the dataset.json that ships with ToothFairy3
+# ---------------------------------------------------------------------------
+dataset:
+  id: 100                           # nnU-Net dataset ID (Dataset100_…)
+  name: "Dataset100_ToothFairy3"
+  num_classes: 77                    # 76 foreground + 1 background
+  num_volumes: 532                   # Total CBCT volumes in the dataset
+  file_ending: ".nii.gz"
+  channel_names:
+    0: "CBCT"
+
+  # ----- Full label map (from dataset.json) --------------------------------
+  # 77 classes with NON-CONTIGUOUS label IDs spanning 0 → 148.
+  # nnU-Net handles non-contiguous labels natively.
+  labels:
+    0: "background"
+    1: "Lower Jawbone"
+    2: "Upper Jawbone"
+    3: "Left Inferior Alveolar Canal"
+    4: "Right Inferior Alveolar Canal"
+    5: "Left Maxillary Sinus"
+    6: "Right Maxillary Sinus"
+    7: "Pharynx"
+    8: "Bridge"
+    9: "Crown"
+    10: "Implant"
+    # ---- Upper-right quadrant teeth (FDI 11–18) ---
+    11: "Tooth 11"
+    12: "Tooth 12"
+    13: "Tooth 13"
+    14: "Tooth 14"
+    15: "Tooth 15"
+    16: "Tooth 16"
+    17: "Tooth 17"
+    18: "Tooth 18"
+    # ---- Upper-left quadrant teeth (FDI 21–28) ---
+    21: "Tooth 21"
+    22: "Tooth 22"
+    23: "Tooth 23"
+    24: "Tooth 24"
+    25: "Tooth 25"
+    26: "Tooth 26"
+    27: "Tooth 27"
+    28: "Tooth 28"
+    # ---- Lower-left quadrant teeth (FDI 31–38) ---
+    31: "Tooth 31"
+    32: "Tooth 32"
+    33: "Tooth 33"
+    34: "Tooth 34"
+    35: "Tooth 35"
+    36: "Tooth 36"
+    37: "Tooth 37"
+    38: "Tooth 38"
+    # ---- Lower-right quadrant teeth (FDI 41–48) ---
+    41: "Tooth 41"
+    42: "Tooth 42"
+    43: "Tooth 43"
+    44: "Tooth 44"
+    45: "Tooth 45"
+    46: "Tooth 46"
+    47: "Tooth 47"
+    48: "Tooth 48"
+    # ---- Root canals ---
+    103: "Canal 103"
+    104: "Canal 104"
+    105: "Canal 105"
+    # ---- Pulp chambers (FDI numbering + 100) ---
+    111: "Pulp 11"
+    112: "Pulp 12"
+    113: "Pulp 13"
+    114: "Pulp 14"
+    115: "Pulp 15"
+    116: "Pulp 16"
+    117: "Pulp 17"
+    118: "Pulp 18"
+    121: "Pulp 21"
+    122: "Pulp 22"
+    123: "Pulp 23"
+    124: "Pulp 24"
+    125: "Pulp 25"
+    126: "Pulp 26"
+    127: "Pulp 27"
+    128: "Pulp 28"
+    131: "Pulp 31"
+    132: "Pulp 32"
+    133: "Pulp 33"
+    134: "Pulp 34"
+    135: "Pulp 35"
+    136: "Pulp 36"
+    137: "Pulp 37"
+    138: "Pulp 38"
+    141: "Pulp 41"
+    142: "Pulp 42"
+    143: "Pulp 43"
+    144: "Pulp 44"
+    145: "Pulp 45"
+    146: "Pulp 46"
+    147: "Pulp 47"
+    148: "Pulp 48"
+
+# ---------------------------------------------------------------------------
+# nnU-Net — training & inference settings
+# ---------------------------------------------------------------------------
+nnunet:
+  configuration: "3d_fullres"        # Options: 3d_fullres, 3d_lowres, 3d_cascade_fullres
+  trainer: "nnUNetTrainer"           # Default nnU-Net trainer class
+  plans: "nnUNetPlans"               # Plans file identifier
+  folds: [0]                         # Folds to train; use [0,1,2,3,4] for full 5-fold CV
+  num_processes: 8                   # Parallel workers for preprocessing / inference
+
+# ---------------------------------------------------------------------------
+# Training
+# ---------------------------------------------------------------------------
+training:
+  epochs: 1000                       # nnU-Net default is 1000
+  continue_training: false           # Resume from last checkpoint if true
+  compile: false                     # torch.compile (PyTorch ≥ 2.0, experimental)
+
+# ---------------------------------------------------------------------------
+# Evaluation & post-processing
+# ---------------------------------------------------------------------------
+evaluation:
+  postprocessing:
+    min_component_size: 100          # Remove connected components < N voxels
+    apply_connected_components: true # Enable/disable CC filtering
+  test_time_augmentation: false      # Mirror-axis TTA during inference
+  save_softmax: false                # Save full softmax probabilities (large!)
+
+# ---------------------------------------------------------------------------
+# Visualization
+# ---------------------------------------------------------------------------
+visualization:
+  num_cases: 3                       # Number of volumes to render
+  opacity: 0.3                       # Overlay opacity for segmentation masks
+  colormap: "tab20"                  # Matplotlib colormap name
+  dpi: 150                           # Figure resolution
+  slice_axis: "axial"                # Default slice orientation: axial | coronal | sagittal
+  save_format: "png"                 # Output image format

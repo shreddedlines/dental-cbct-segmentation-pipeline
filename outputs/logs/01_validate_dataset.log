@@ -1,0 +1,56 @@
+2026-07-03 03:22:39 | INFO     | dental_pipeline.config | Logging initialised — file: /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/logs/01_validate_dataset.log
+2026-07-03 03:22:39 | INFO     | __main__ | ======================================================================
+2026-07-03 03:22:39 | INFO     | __main__ | PHASE 1 — Dataset Validation
+2026-07-03 03:22:39 | INFO     | __main__ | ======================================================================
+2026-07-03 03:22:39 | INFO     | __main__ | Sample size: 30
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator | ======================================================================
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator | Starting full dataset validation …
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator |   Dataset root : /path/to/ToothFairy3
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator |   Images dir   : /path/to/ToothFairy3/imagesTr
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator |   Labels dir   : /path/to/ToothFairy3/labelsTr
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator | ======================================================================
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator | Checking imagesTr ↔ labelsTr file pairing …
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator |   ✓ File pairing OK — 0 paired cases.
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator | Validating shapes (sample=30) …
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator |   ✓ All 0 checked cases have matching shapes.
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator | Validating label values (sample=30) …
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator |   ✓ All 0 checked volumes have valid label values.
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator | Computing class distribution (sample=30) …
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator |   0 / 78 classes have non-zero voxel counts.
+2026-07-03 03:22:39 | INFO     | dental_pipeline.dataset_validator | Computing spacing statistics (all volumes) …
+2026-07-03 03:24:43 | INFO     | dental_pipeline.config | Logging initialised — file: /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/logs/01_validate_dataset.log
+2026-07-03 03:24:43 | INFO     | __main__ | ======================================================================
+2026-07-03 03:24:43 | INFO     | __main__ | PHASE 1 — Dataset Validation
+2026-07-03 03:24:43 | INFO     | __main__ | ======================================================================
+2026-07-03 03:24:43 | INFO     | __main__ | Sample size: 30
+2026-07-03 03:24:43 | INFO     | dental_pipeline.dataset_validator | ======================================================================
+2026-07-03 03:24:43 | INFO     | dental_pipeline.dataset_validator | Starting full dataset validation …
+2026-07-03 03:24:43 | INFO     | dental_pipeline.dataset_validator |   Dataset root : /usershome/cs671_user15/Dobbe AI/ToothFairy3
+2026-07-03 03:24:43 | INFO     | dental_pipeline.dataset_validator |   Images dir   : /usershome/cs671_user15/Dobbe AI/ToothFairy3/imagesTr
+2026-07-03 03:24:43 | INFO     | dental_pipeline.dataset_validator |   Labels dir   : /usershome/cs671_user15/Dobbe AI/ToothFairy3/labelsTr
+2026-07-03 03:24:43 | INFO     | dental_pipeline.dataset_validator | ======================================================================
+2026-07-03 03:24:43 | INFO     | dental_pipeline.dataset_validator | Checking imagesTr ↔ labelsTr file pairing …
+2026-07-03 03:24:43 | WARNING  | dental_pipeline.dataset_validator |   ✗ File pairing FAILED — 52 image-only, 1 label-only.
+2026-07-03 03:24:43 | INFO     | dental_pipeline.dataset_validator | Validating shapes (sample=30) …
+2026-07-03 03:24:43 | INFO     | dental_pipeline.dataset_validator |   ✓ All 30 checked cases have matching shapes.
+2026-07-03 03:24:43 | INFO     | dental_pipeline.dataset_validator | Validating label values (sample=30) …
+2026-07-03 03:24:46 | INFO     | dental_pipeline.dataset_validator |   ✓ All 30 checked volumes have valid label values.
+2026-07-03 03:24:46 | INFO     | dental_pipeline.dataset_validator | Computing class distribution (sample=30) …
+2026-07-03 03:24:49 | INFO     | dental_pipeline.dataset_validator |   78 / 78 classes have non-zero voxel counts.
+2026-07-03 03:24:49 | INFO     | dental_pipeline.dataset_validator | Computing spacing statistics (all volumes) …
+2026-07-03 03:24:49 | INFO     | dental_pipeline.dataset_validator |   Spacing — mean: (0.300, 0.300, 0.300)  |  1 unique combos.
+2026-07-03 03:24:49 | INFO     | dental_pipeline.dataset_validator | Computing intensity statistics (sample=10) …
+2026-07-03 03:24:54 | INFO     | dental_pipeline.dataset_validator |   Intensity range: [-1000.0, 4091.0]  mean-of-means: -89.7
+2026-07-03 03:24:54 | INFO     | dental_pipeline.dataset_validator | Checking for NaN/Inf (sample=10) …
+2026-07-03 03:24:59 | INFO     | dental_pipeline.dataset_validator |   ✓ No NaN/Inf found in 10 checked volumes.
+2026-07-03 03:24:59 | INFO     | dental_pipeline.dataset_validator | Computing FOV breakdown …
+2026-07-03 03:24:59 | INFO     | dental_pipeline.dataset_validator |   Unclassified: 532 volumes
+2026-07-03 03:24:59 | INFO     | dental_pipeline.dataset_validator | ======================================================================
+2026-07-03 03:24:59 | INFO     | dental_pipeline.dataset_validator | Validation complete in 16.3 s.
+2026-07-03 03:24:59 | INFO     | dental_pipeline.dataset_validator | ======================================================================
+2026-07-03 03:24:59 | INFO     | __main__ | JSON results saved → /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/validation_report/validation_results.json
+2026-07-03 03:25:00 | INFO     | dental_pipeline.dataset_validator | Report written to /usershome/cs671_user15/Dobbe AI/dental-segmentation/outputs/validation_report/validation_report.md
+2026-07-03 03:25:00 | INFO     | __main__ | 
+2026-07-03 03:25:00 | INFO     | __main__ | ======================================================================
+2026-07-03 03:25:00 | INFO     | __main__ | VALIDATION PASSED ✓
+2026-07-03 03:25:00 | INFO     | __main__ | ======================================================================
