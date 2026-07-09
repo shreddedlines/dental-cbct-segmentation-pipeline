@@ -26,8 +26,11 @@ pandas>=2.0
 
 # ── Visualization ───────────────────────────────────────────────────────
 matplotlib>=3.7
-plotly>=5.18
-kaleido>=0.2.1       # Static image export for Plotly (optional but recommended)
+plotly>=5.18                # Interactive HTML viewer
+pyvista>=0.43               # Offscreen 3D rendering (no Chrome needed)
+Pillow>=10.0                # PNG image saving
+imageio>=2.31               # Animation assembly (GIF)
+imageio-ffmpeg>=0.4         # MP4 export via ffmpeg (optional but recommended)
 
 # ── Configuration & utilities ────────────────────────────────────────────
 PyYAML>=6.0
